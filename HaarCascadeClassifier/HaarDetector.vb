@@ -81,7 +81,7 @@ Public Class HaarDetector
 
     ' For 8 bits per pixel images
     Private Sub CalculateCumSums8bpp(ByRef CumSum(,) As Integer, ByRef CumSum2(,) As Long, ByRef BitmapData As BitmapData, ByRef Width As Integer, ByRef Height As Integer)
-        Dim AbsOfStride As Integer = Math.Abs(BitmapData.Stride)
+        Dim AbsOfStride As Integer = FastAbs(BitmapData.Stride)
         Dim ExtraBPerLine As Integer = AbsOfStride - Width
         Dim ScanWidthWP As Integer = AbsOfStride - ExtraBPerLine ' Scan width without padding
         Dim BmpDataPtr As IntPtr = BitmapData.Scan0
@@ -122,7 +122,7 @@ Public Class HaarDetector
 
     ' For 24 bits per pixel images
     Private Sub CalculateCumSums24bpp(ByRef CumSum(,) As Integer, ByRef CumSum2(,) As Long, ByRef BitmapData As BitmapData, ByRef Width As Integer, ByRef Height As Integer)
-        Dim AbsOfStride As Integer = Math.Abs(BitmapData.Stride)
+        Dim AbsOfStride As Integer = FastAbs(BitmapData.Stride)
         Dim ExtraBPerLine As Integer = AbsOfStride - Width * 3
         Dim ScanWidthWP As Integer = AbsOfStride - ExtraBPerLine ' Scan width without padding
         Dim BmpDataPtr As IntPtr = BitmapData.Scan0
