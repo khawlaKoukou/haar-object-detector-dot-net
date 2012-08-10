@@ -128,7 +128,7 @@ Friend Class HaarCascade
                                                             Next
                                                         ElseIf TNCChild.Name.Equals("tilted") Then
                                                             If Parser.ParseInt(TNCChild.InnerText) = 1 Then
-                                                                ' Not supported for now. Planned to be implemented in future releases.
+                                                                ' Not supported for now. Will be implemented in future releases.
                                                                 Throw New Exception("Tilted features are not supported yet!")
                                                                 Return
                                                             End If
