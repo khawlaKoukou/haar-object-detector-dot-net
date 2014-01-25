@@ -3,6 +3,7 @@ Imports System.Xml
 Imports System.Drawing
 Imports System.Drawing.Imaging
 Imports System.Runtime.InteropServices
+Imports System.Threading
 
 Public Class HaarDetector
 

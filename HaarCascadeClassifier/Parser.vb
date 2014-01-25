@@ -1,6 +1,7 @@
 ﻿
 Imports System.Drawing
 Imports HaarCascadeClassifer.HaarCascade
+Imports System.Globalization
 
 Friend Class Parser
 
@@ -37,7 +38,7 @@ Friend Class Parser
 
     ' Sample: "0.0337941907346249"
     Public Shared Function ParseSingle(ByVal StringVal As String) As Single
-        Return (Single.Parse(StringVal.Trim.Replace(".", ",")))
+        Return (Single.Parse(ReplaceDecimalSeperator(StringVal.Trim)))
     End Function
 
     ' Sample: "1"
@@ -55,9 +56,14 @@ Friend Class Parser
         If Weight.EndsWith(".") Then
             Weight = Weight.Replace(".", "")
         Else
-            Weight = Weight.Replace(".", ",")
+            Weight = ReplaceDecimalSeperator(Weight)
         End If
         FR.Weight = Convert.ToInt32(Weight.Trim)
         Return FR
+    End Function
+
+    Public Shared NumberDecimalSeparator As String = CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    Public Shared Function ReplaceDecimalSeperator(ByVal Val As String) As String
+        Return Val.Replace(".", NumberDecimalSeparator)
     End Function
 End Class

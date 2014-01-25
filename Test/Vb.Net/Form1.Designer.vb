@@ -52,7 +52,7 @@ Partial Class Form1
         '
         'btnBrowse
         '
-        Me.btnBrowse.Location = New System.Drawing.Point(399, 229)
+        Me.btnBrowse.Location = New System.Drawing.Point(399, 216)
         Me.btnBrowse.Name = "btnBrowse"
         Me.btnBrowse.Size = New System.Drawing.Size(75, 23)
         Me.btnBrowse.TabIndex = 0
@@ -207,7 +207,7 @@ Partial Class Form1
         'btnDetect
         '
         Me.btnDetect.Enabled = False
-        Me.btnDetect.Location = New System.Drawing.Point(480, 229)
+        Me.btnDetect.Location = New System.Drawing.Point(480, 216)
         Me.btnDetect.Name = "btnDetect"
         Me.btnDetect.Size = New System.Drawing.Size(75, 23)
         Me.btnDetect.TabIndex = 16
@@ -217,18 +217,17 @@ Partial Class Form1
         'lblInfo
         '
         Me.lblInfo.ForeColor = System.Drawing.Color.Green
-        Me.lblInfo.Location = New System.Drawing.Point(338, 192)
+        Me.lblInfo.Location = New System.Drawing.Point(9, 256)
         Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(217, 36)
+        Me.lblInfo.Size = New System.Drawing.Size(543, 19)
         Me.lblInfo.TabIndex = 17
-        Me.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(567, 263)
+        Me.ClientSize = New System.Drawing.Size(564, 279)
         Me.Controls.Add(Me.lblInfo)
         Me.Controls.Add(Me.btnDetect)
         Me.Controls.Add(Me.Label7)
@@ -251,7 +250,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "HaarCascadeClasifier.dll Test (Vb.Net)"
+        Me.Text = "HaarCascadeClassifier.dll Test (Vb.Net)"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudMinNRectCount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudMinSize, System.ComponentModel.ISupportInitialize).EndInit()

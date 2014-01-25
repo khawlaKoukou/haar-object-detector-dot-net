@@ -34,7 +34,7 @@ Public Class Form1
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim Start As DateTime = Now
         Dim XMLDoc As New Xml.XmlDocument
-        XMLDoc.LoadXml(HaarCascadeClassifer.EmbeddedCascades.haarcascade_frontalface_alt)
+        XMLDoc.LoadXml(HaarCascadeClassifer.My.Resources.haarcascade_frontalface_alt)
         Detector = New HaarDetector(XMLDoc)
         lblInfo.Text = "XML cascade parsed in " & Math.Round((Now - Start).TotalMilliseconds, 3).ToString & " milliseconds."
     End Sub
@@ -76,6 +76,6 @@ Public Class Form1
         Dim Elapsed As TimeSpan = Now - Start
 
         PictureBox1.Image = Bmp
-        lblInfo.Text = Results.SearchedSubRegionCount & " subregions are searched and " & Results.NOfObjects & " object(s) detected in " & Math.Round(Elapsed.TotalMilliseconds, 3).ToString & " milliseconds."
+        lblInfo.Text = Results.SearchedSubRegionCount & " subregions were searched and " & Results.NOfObjects & " object(s) were detected in " & Math.Round(Elapsed.TotalMilliseconds, 3).ToString & " milliseconds."
     End Sub
 End Class

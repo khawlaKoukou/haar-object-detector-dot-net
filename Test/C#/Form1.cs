@@ -44,7 +44,7 @@ namespace HaarCascadeClassifierTEST
         {
             DateTime start = DateTime.Now;
             XmlDocument xmlDoc=new XmlDocument();
-            xmlDoc.LoadXml(HaarCascadeClassifer.EmbeddedCascades.Resources.haarcascade_frontalface_alt);
+            xmlDoc.LoadXml(HaarCascadeClassifer.My.Resources.Resources.haarcascade_frontalface_alt);
             detector = new HaarDetector(xmlDoc);
             lblInfo.Text = "XML cascade parsed in " + Math.Round((DateTime.Now - start).TotalMilliseconds, 3).ToString() + " milliseconds.";
         }
@@ -87,7 +87,7 @@ namespace HaarCascadeClassifierTEST
             TimeSpan Elapsed = DateTime.Now - start;
 
             pictureBox1.Image = bmp;
-            lblInfo.Text = results.SearchedSubRegionCount.ToString() + " subregions are searched and " + results.NOfObjects.ToString() + " object(s) detected in " + Math.Round(Elapsed.TotalMilliseconds, 3).ToString() + " milliseconds.";
+            lblInfo.Text = results.SearchedSubRegionCount.ToString() + " subregions were searched and " + results.NOfObjects.ToString() + " object(s) were detected in " + Math.Round(Elapsed.TotalMilliseconds, 3).ToString() + " milliseconds.";
         }
 
     }

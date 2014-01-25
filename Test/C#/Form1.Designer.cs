@@ -59,16 +59,15 @@
             // lblInfo
             // 
             this.lblInfo.ForeColor = System.Drawing.Color.Green;
-            this.lblInfo.Location = new System.Drawing.Point(338, 192);
+            this.lblInfo.Location = new System.Drawing.Point(9, 256);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(217, 36);
+            this.lblInfo.Size = new System.Drawing.Size(543, 19);
             this.lblInfo.TabIndex = 35;
-            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnDetect
             // 
             this.btnDetect.Enabled = false;
-            this.btnDetect.Location = new System.Drawing.Point(480, 229);
+            this.btnDetect.Location = new System.Drawing.Point(480, 216);
             this.btnDetect.Name = "btnDetect";
             this.btnDetect.Size = new System.Drawing.Size(75, 23);
             this.btnDetect.TabIndex = 34;
@@ -303,7 +302,7 @@
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(399, 229);
+            this.btnBrowse.Location = new System.Drawing.Point(399, 216);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 18;
@@ -315,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 264);
+            this.ClientSize = new System.Drawing.Size(564, 279);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnDetect);
             this.Controls.Add(this.Label7);
@@ -338,7 +337,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HaarCascadeClasifier.dll Test (C#)";
+            this.Text = "HaarCascadeClassifier.dll Test (C#)";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLineWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSlidingRatio)).EndInit();
